@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Name: Dailee Howard
+        Date: October 31st, 2020
+        File: guestbook.html
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/guestbook.css">
+
+    <link rel="icon" type="image/png" href="../images/book.png">
+    <title>My Guestbook!</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="https://dhoward.greenriverdev.com/305/portfolio/pages/guestbook.html">Guestbook</a></li>
+                <li><a href="https://dhoward.greenriverdev.com/305/portfolio/pages/admin.php">Admin</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container" id="main">
+        <div class="jumbotron">
+            <h1 class="display-3 heading"><strong>Sign My Guestbook!</strong></h1>
+            <p class="lead heading">Let's keep in touch...</p>
+        </div>
+
+        <form id="guestbookform" method="post" action="guestbook-confirmation.php">
+            <fieldset class="form-group border p-2">
+                <legend class="fancyFont">Contact Info</legend>
+
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName">
+                    <span class="d-none text-danger" id="err-firstName">Please enter your first name</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName">
+                    <span class="d-none text-danger" id="err-lastName">Please enter your last name</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="jobTitle">Job Title</label>
+                    <input type="text" class="form-control" id="jobTitle" name="jobTitle">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" class="form-control" id="company" name="company">
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedIn">LinkedIn Profile URL</label>
+                    <input type="url" class="form-control" id="linkedIn" name="linkedIn">
+                    <span class="d-none text-danger" id="err-linkedIn-invalid">
+                        The Linked In link provided is invalid (link should start with "http" and end with ".com")
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                    <span class="d-none text-danger" id="err-email-invalid">
+                        The email address provided is invalid (email must contain "@" and ".")
+                    </span>
+                    <span class="d-none text-danger" id="err-email">
+                        Please enter your email address (email is required when signing up for mailing list)
+                    </span>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-group border p-2">
+                <legend class="fancyFont">How We Met</legend>
+
+                <label for="meetingEvent">Meeting Event</label>
+                <select class="form-control" id="meetingEvent" name="meetingEvent">
+                    <option value="">Please specify...</option>
+                    <option value="work">Work</option>
+                    <option value="school">School</option>
+                    <option value="meetup">Meetup</option>
+                    <option value="jobFair">Job Fair</option>
+                    <option value="other" id="meetingEventOther" onclick="addOther()">Other</option>
+                    <option value="haveNotMet">We Haven't Met Yet</option>
+                </select>
+                <span class="d-none text-danger" id="err-meetingEvent">Please select one way we met</span>
+
+                <div class="form-group m-3" style="display: none;">
+                    <label for="otherText">If other, please specify</label>
+                    <input type="text" class="form-control" id="otherText" name="otherText">
+                </div>
+
+                <div class="form-group m-2">
+                    <label for="message">Message</label>
+                    <input type="text" class="form-control" id="message" name="message">
+                </div>
+            </fieldset>
+
+            <fieldset class="form-group border p-2">
+                <legend class="fancyFont">Mailing List</legend>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="mailingList" name="mailingList" onchange="addEmailOptions()">
+                        &nbsp;Please add me to your mailing list!
+                    </label>
+                </div>
+
+                <div style="display: none;" id="emailOptions">
+                    <label>Please choose an email format:</label>
+
+                    <div class="form-check displayInline m-2">
+                        <input class="form-check-input" type="radio" name="method" id="html" value="html">
+                        <label class="form-check-label" for="html">HTML</label>
+                    </div>
+
+                    <div class="form-check displayInline">
+                        <input class="form-check-input" type="radio" name="method" id="text" value="text">
+                        <label class="form-check-label" for="text">Text</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Sign!">
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+    <script src="..//scripts/guestbook.js"></script>
+</body>
+</html>
