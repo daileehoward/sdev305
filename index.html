@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Name: Dailee Howard
+        Date: December 3rd, 2020
+        File: index.html
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Welcome!</title>
+</head>
+<body>
+    <div class="container-fluid m-3">
+        <h2>A Little Bit About Me!</h2>
+        <p>
+            Hello there!<br>
+            My name is Dailee Howard and I'm an IT Software Development Student at Green River College.<br>
+            You can explore some of my programming projects and resources here!<br>
+            I'm on the lookout for new employment opportunities, with a focus in databases and back-end work,<br>
+            so please keep me in mind.
+        </p>
+
+        <h5>My Past...</h5>
+        <p>
+            I would definitely say that I come from a non-tech background. I was born and raised in Renton Washington
+            with my mother, father, and brother. Growing up, I developed my love of animals, music, and helping others.
+            When it came time to start deciding what I wanted to do in life, I went from wanting to be a lawyer, to a
+            cancer researcher, to a music therapist. I started taking all kinds of courses at Green River to help me
+            finally decide what I actually wanted to be. I ended up concentrating in accounting, and although I was
+            good with numbers, they didn't leave me coming back for more...
+        </p>
+
+        <h5>My Present...</h5>
+        <p>
+            Shortly after, I took the plunge and enrolled in a 3-credit "Intro to Python" course, to which I swore it
+            would be the last subject I try. To my amazement, I found something that I was not only good at, but
+            something I actually enjoyed working with. Ever since then, I was accepted into the bachelor's program in
+            Cohort 12 and am getting some real-world experience with coding. On top of that, I'm thankful for being able
+            work as an IT Student Help Desk Employee for the college. When I find time away from the keyboard, I like to
+            go horseback riding, off-roading, camping, and pick up a good mystery-themed book...
+        </p>
+
+        <h5>My Future...</h5>
+        <p>
+            As I'm progressing through the bachelor's program, I hope to narrow down exactly which area of software I
+            want to pursue for the future. Like my classmates, I'm working towards obtaining an internship for the summer
+            (2020) that would hopefully get my foot-in-the-door to a full-time career by the time of graduation
+            (if not sooner)! Eventually, I'd like to look into doing more remote-work, which this past year has prepped
+            me quite well for...
+        </p>
+    </div>
+
+    <div class="container-fluid row pd-t">
+        <div class="card offset-lg-1 col-lg-4 col-12 pt-2">
+            <a href="portfolio/portfolio.html">
+                <h3 style="text-align: center;">Peek At My Portfolio!</h3>
+            </a>
+            <div style="text-align: center; align-items: center;" class="pb-3">
+                <img style="width: 300px;" src="images/portfolio.png" alt="Portfolio Snapshot"/>
+            </div>
+        </div>
+
+        <div class="card offset-lg-2 col-lg-4 col-12 pt-2">
+            <a href="https://www.linkedin.com/in/dailee-howard-1056011b8/">
+                <h3 style="text-align: center;">Visit My Linked In!</h3>
+            </a>
+            <div style="text-align: center; align-items: center;" class="pb-3">
+                <img style="width: 300px;" src="images/LinkedIn.png" alt="Linked In Snapshot"/>
+            </div>
+        </div>
+
+        <div class="card offset-lg-1 col-lg-4 col-12 pt-2">
+            <a href="portfolio/pages/index.html">
+                <h3 style="text-align: center;">View My Resume!</h3>
+            </a>
+            <div style="text-align: center; align-items: center;" class="pb-3">
+                <img style="width: 300px;" src="images/resume.png" alt="Resume Snapshot"/>
+            </div>
+        </div>
+
+        <div class="card offset-lg-2 col-lg-4 col-12 pt-2">
+            <a href="portfolio/pages/guestbook.html">
+                <h3 style="text-align: center;">Leave Me A Note!</h3>
+            </a>
+            <div style="text-align: center; align-items: center;" class="pb-3">
+                <img style="width: 300px;" src="images/guestbook.png" alt="Guestbook Snapshot"/>
+            </div>
+        </div>
+
+        <footer class="container m-5">
+            <button type="button" class="pd-t-3 btn btn-primary" onclick="adminLoggingIn();">Admin Login</button>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+    <script>
+        function adminLoggingIn()
+        {
+            window.location = "https://dhoward.greenriverdev.com/305/portfolio/pages/login.php";
+        }
+    </script>
+</body>
+</html>

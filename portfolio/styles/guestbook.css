@@ -1,0 +1,30 @@
+/*
+    Name: Dailee Howard
+    Date: October 31st, 2020
+    File: guestbook.css
+*/
+
+body
+{
+    background-color: #0c5460;
+}
+
+.container
+{
+    background-color: white;
+}
+
+.heading
+{
+    text-align: center;
+}
+
+.displayInline
+{
+    display: inline;
+}
+
+.fancyFont
+{
+    font-style: oblique;
+}

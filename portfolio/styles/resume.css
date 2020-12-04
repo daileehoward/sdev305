@@ -1,0 +1,44 @@
+/*
+    Name: Dailee Howard
+    Date: October 24th, 2020
+    File: resume.css
+*/
+
+header
+{
+    background-color: #117a8b;
+    border: 5px solid black;
+}
+
+h1
+{
+    font-family: 'Droid Serif', serif;
+    font-size: 36px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 44px;
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+
+.right-align
+{
+    text-align: right;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.box
+{
+    border: 2px solid black;
+    margin: 5px;
+}
+
+ul > li
+{
+    list-style: none;
+}
